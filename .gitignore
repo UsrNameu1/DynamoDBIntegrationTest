@@ -1,0 +1,16 @@
+# play
+logs 
+target
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+
+# idea
+/.idea
+/.idea_modules
+/*.iml
+/out
+
+# OS X
+.DS_Store
