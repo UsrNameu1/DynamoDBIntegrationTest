@@ -31,9 +31,7 @@ class PostAppSpec extends PlaySpecification with Mockito {
   trait ApplicationWithTable {
     self: UserTable with After =>
 
-    val application = new GuiceApplicationBuilder()
-      .overrides(bind[DynamoDB].toInstance(dynamoDB))
-      .build()
+    val application = new GuiceApplicationBuilder().build()
 
     override def after: Any = {
       userTable.scan(new ScanSpec).toSeq.foreach { item =>
